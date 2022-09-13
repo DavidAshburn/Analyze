@@ -1,7 +1,17 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
+static targets = [ 
+  "alert" 
+  ]
+
+  initialize() {
+  }
+
   connect() {
-    this.element.textContent = "Hello World!"
+  }
+
+  close() {
+    this.element.remove()
   }
 }
