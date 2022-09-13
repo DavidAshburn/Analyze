@@ -1,0 +1,23 @@
+@use 'colors';
+
+
+%card {
+	font-family: "Righteous";
+	justify-content: center;
+	color: colors.$dark;
+}
+.card-title {
+	@extend %card;
+	font-size: 20pt;
+}
+
+.card-location {
+	@extend %card;
+	font-size: 15pt;
+	color: colors.$grey;
+}
+
+.card-variant-title {
+	@extend %card;
+	font-size: 18pt;
+}

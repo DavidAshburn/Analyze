@@ -1,0 +1,100 @@
+%flex {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+%flex-col {
+	@extend %flex;
+	flex-direction: column;
+}
+
+
+// Columns -----------------------
+.stack-left {
+	@extend %flex-col;
+	justify-content: start;
+}
+
+.stack-right {
+	@extend %flex-col;
+	justify-content: end;
+}
+.stack-center {
+	@extend %flex-col;
+	justify-content: center;
+}
+.stack-between {
+	@extend %flex-col;
+	justify-content: space-between;
+}
+.stack-even {
+	@extend %flex-col;
+	justify-content: space-evenly;
+}
+
+
+// Rows --------------------------
+.row-left {
+	@extend %flex;
+	justify-content: start;
+}
+
+.row-right {
+	@extend %flex;
+	justify-content: end;
+}
+
+.row-center {
+	@extend %flex;
+	justify-content: center;
+}
+
+.row-between {
+	@extend %flex;
+	justify-content: space-between;
+}
+
+.row-even {
+	@extend %flex;
+	justify-content: space-evenly;
+}
+
+.container-alert {
+	@extend %flex;
+	justify-content: center;
+	position: fixed;
+	width: 100vw;
+	botom: 10px;
+}
+
+.table {
+	
+}
+
+
+//Media Queries
+
+@media (max-width: 600px) {
+
+	// Reactive Rows
+  	.row-left {
+    	flex-direction: column;
+  	}
+
+  	.row-right {
+  		flex-direction: column;
+  	}
+
+  	.row-center {
+		flex-direction: column;
+  	}
+
+  	.row-between {
+		flex-direction: column;
+  	}
+
+  	.row-even {
+		flex-direction: column;
+  	}
+}
