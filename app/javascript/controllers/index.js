@@ -9,3 +9,6 @@ application.register("alert", AlertController)
 
 import NavbarController from "./navbar_controller"
 application.register("navbar", NavbarController)
+
+import CalcController from "./calc_controller"
+application.register("calc", CalcController)

@@ -1,23 +1,24 @@
 @use 'colors';
 
 
-%card {
+.card {
 	font-family: "Righteous";
 	justify-content: center;
 	color: colors.$dark;
+	width: inherit;
 }
 .card-title {
-	@extend %card;
 	font-size: 20pt;
+	border-radius: 10px 10px 0 0;
 }
 
-.card-location {
-	@extend %card;
+.card-body {
 	font-size: 15pt;
 	color: colors.$grey;
 }
 
-.card-variant-title {
-	@extend %card;
-	font-size: 18pt;
+.card-footer {
+	font-size: 15pt;
+	color: colors.$dark;
+	border-radius: 0 0 10px 10px;
 }
