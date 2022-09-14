@@ -1,9 +1,7 @@
-<p style="color: green"><%= notice %></p>
-
 <h1>Leads</h1>
 
 <div id="leads">
-  <% @leads.each do |lead| %>
+  <% current_user.leads.each do |lead| %>
     <%= render lead %>
     <p>
       <%= link_to "Show this lead", lead %>

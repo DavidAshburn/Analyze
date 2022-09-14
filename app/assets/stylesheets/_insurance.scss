@@ -26,6 +26,11 @@
 	@extend %ins-base;
 }
 
+#myleads {
+	overflow-y: scroll;
+	height: 50vh;
+}
+
 .output {
 	margin: 1.5rem;
 	font-weight: bold;

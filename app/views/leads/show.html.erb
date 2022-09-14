@@ -1,10 +1,19 @@
-<p style="color: green"><%= notice %></p>
+<div class="stack-left col-8 col-s-12" id="myleads">
+    <table>
+      <thead>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Lines</th>
+      </thead>
+      <tbody>
+        <%= render @lead %>
+      </tbody>
+    </table>
+  </div>
 
-<%= render @lead %>
-
-<div>
-  <%= link_to "Edit this lead", edit_lead_path(@lead) %> |
-  <%= link_to "Back to leads", leads_path %>
-
-  <%= button_to "Destroy this lead", @lead, method: :delete %>
+<div class="btn-group">
+  <%= link_to "Edit this lead", edit_lead_path(@lead), class:"group-button" %>
+  <%= link_to "Back to leads", leads_path, class:"group-button" %>
+  <%= button_to "Destroy this lead", @lead, method: :delete, class:"group-button" %>
 </div>
