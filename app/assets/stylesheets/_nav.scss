@@ -5,6 +5,7 @@ nav {
 	position: sticky;
 	top: 10px;
 	left: 0;
+	height: 3rem;
 
 	width: 100vw;
 	display: flex;
@@ -16,9 +17,12 @@ nav {
 	background-color: colors.$primary;
 	color: colors.$dark;
 
+	border-radius: 2rem 0 0 2rem;
+
 	.img-link {
 		border-radius: 50%;
 		height: 3rem;
+		align-self: center;
 	}
 
 	ul {
