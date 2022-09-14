@@ -1,39 +1,79 @@
-<div class="stack-center col-12 col-s-12">
+<div class="stack-center col-12 col-s-12" data-controller="calc">
+	<h1 class="title">Coverage Calc</h1>
 	<div class="row-center col-12 col-s-12" id="home">
-		<div class="stack-left col-6 col-s-12" id="homeinput">
-			<span>Home Value:</span><input type="text" class="dollars-in">
-			<span>Dwelling Coverage:</span><input type="text" class="dollars-in">
-			<span>Extended Replacement:</span><input type="text" class="dollars-in">
-			<span>Total Dwelling:</span><input type="text" class="dollars-in">
-			<span>Square Footage:</span><input type="text" class="dollars-in">
-			<span>Liability Coverage:</span><input type="text" class="dollars-in">
-			<span>Home Premium:</span><input type="text" class="dollars-in">
-			<span>Earthquake:</span><input type="text" class="dollars-in">
-			<span>Flood:</span><input type="text" class="dollars-in">
-			<span>Jewelry:</span><input type="text" class="dollars-in">
-		</div>
-		<div class="stack-left col-6 col-s-12" id="homecalc">
-			<div data-calc-target="coverage" class="output"></div>
-			<div data-calc-target="excessre" class="output"></div>
-			<div data-calc-target="totalpremiums" class="output"></div>
+		<div class="stack-left col-12 col-s-12">
+			<div class="subtitle">Home</div>
+			<div class="row-center col-12 col-s-12">
+				<div class="stack-right col-6 col-s-12" id="homeinput">
+					<ul>
+						<li><span>Home Value:</span><input type="number" class="dollars-in" data-calc-target="value"></li>
+						<li><span>Square Footage:</span><input type="number" class="dollars-in" data-calc-target="footage"></li>
+						<br>
+
+						<li><span>Dwelling Coverage:</span><input type="number" class="dollars-in" data-calc-target="dwelling" ></li>
+						<li><span>Extended Replacement:</span><input type="number" class="dollars-in" data-calc-target="erc" ></li>
+						<li><span>Liability Coverage:</span><input type="number" class="dollars-in" data-calc-target="homeliability" ></li>
+					</ul>
+				</div>
+				<div class="stack-center col-6 col-s-12" id="homecalc">
+					<div class="output">Excess RE Risk<span data-calc-target="excessre" ></span></div>
+					<div class="output">Coverage / Sq Ft<span data-calc-target="coversqft" ></span></div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="row-center col-12 col-s-12" id="auto">
-		<div class="stack-left col-6 col-s-12" id="autoinput">
-		</div>
-		<div class="stack-left col-6 col-s-12" id="autocalc">
+		<div class="stack-left col-12 col-s-12">
+			<h1 class="subtitle">Auto</h1>
+			<div class="row-center col-12 col-s-12">
+				<div class="stack-right col-6 col-s-12" id="autoinput">
+					<ul>
+						<li><span>Liability Coverage:</span><input type="number" class="dollars-in" data-calc-target="autoliability"></li>
+					</ul>
+				</div>
+				<div class="stack-center col-6 col-s-12" id="autocalc">
+					<div class="output">Excess RE Risk<span data-calc-target="autoexcessre" ></span></div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="row-center col-12 col-s-12" id="umbrella">
-		<div class="stack-left col-6 col-s-12" id="umbrellainput">
-		</div>
-		<div class="stack-left col-6 col-s-12" id="umbrellacalc">
+		<div class="stack-left col-12 col-s-12">
+			<h1 class="subtitle">Umbrella</h1>
+			<div class="row-center col-12 col-s-12">
+				<div class="stack-right col-6 col-s-12" id="umbrellainput">
+					<ul>
+						<li><span>Umbrella Limit:</span><input type="number" class="dollars-in" data-calc-target="umbrellalimit"></li>
+						<li><span># of Owned Properties:</span><input type="number" class="dollars-in" data-calc-target="numproperties"></li>
+						<li><span>Total Value:</span><input type="number" class="dollars-in" data-calc-target="totalpropvalue"></li>
+					</ul>
+				</div>
+				<div class="stack-center col-6 col-s-12" id="umbrellacalc">
+					<div class="output">Excess RE Risk on Auto<span data-calc-target="autoexcessumbrella" ></span></div>
+					<div class="output">Excess RE Risk on Personal<span data-calc-target="personalexcessumbrella" ></span></div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="row-center col-12 col-s-12" id="life">
-		<div class="stack-left col-6 col-s-12" id="lifeinput">
-		</div>
-		<div class="stack-left col-6 col-s-12" id="lifecalc">
+		<div class="stack-left col-12 col-s-12">
+			<h1 class="subtitle">Life</h1>
+			<div class="row-center col-12 col-s-12">
+				<div class="stack-right col-6 col-s-12" id="lifeinput">
+					<ul>
+						<li><span>Work Policy:</span><input type="number" class="dollars-in" data-calc-target="worklife"></li>
+						<li><span>Death Benefit:</span><input type="number" class="dollars-in" data-calc-target="deathbenefit"></li>
+						<li><span>Cash Value:</span><input type="number" class="dollars-in" data-calc-target="cashvalue"></li>
+						<li><span>Annual Income:</span><input type="number" class="dollars-in" data-calc-target="currentannual"></li>
+						<li><span>Number of Dependents:</span><input type="number" class="dollars-in" data-calc-target="dependents"></li>
+					</ul>
+				</div>
+				<div class="stack-center col-6 col-s-12" id="lifecalc">
+					<div class="output">Years of Current Income:<span data-calc-target="yearsincome" ></span></div>
+					<div class="output">Benefit to Each:<span data-calc-target="benefiteach" ></span></div>
+				</div>
+			</div>
 		</div>
 	</div>
+	<button class="btn-flat" data-action="calc#update">Calculate</button>
 </div>

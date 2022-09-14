@@ -17,6 +17,13 @@
 		height: 3rem;
 		font-size: 14pt;
 	}
+}
 
-	
+.dollars-in {
+	@extend %formbase;
+	width: 60%;
+	min-width: 15rem;
+	height: 3rem;
+	font-size: 14pt;
+
 }

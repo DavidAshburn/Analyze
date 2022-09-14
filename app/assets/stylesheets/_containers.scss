@@ -19,6 +19,16 @@
 .stack-right {
 	@extend %flex-col;
 	justify-content: end;
+	padding: 0;
+
+	ul {
+		width: 100%;
+  	li {
+    	display: flex;
+    	justify-content: space-between;
+    	align-items: center;
+  	}
+	}
 }
 .stack-center {
 	@extend %flex-col;
@@ -68,10 +78,11 @@
 	botom: 10px;
 }
 
-.table {
-	
+[class*=row-]::after {
+  content: "";
+  clear: both;
+  display: table;
 }
-
 
 //Media Queries
 

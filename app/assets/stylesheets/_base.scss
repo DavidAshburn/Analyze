@@ -9,21 +9,17 @@ html {
 	height: 100vh;
 	font-family: "Raleway";
 	background: hsla(298, 68%, 90%, 1);
-	background: linear-gradient(90deg, colors.$turqoise 0%, colors.$aqua 30%, colors.$success 65%, colors.$peach 100%);
-}
-
-[class*="col-"] {
-  width: 100%;
-}
-
-.container-row::after {
-  content: "";
-  clear: both;
-  display: table;
+	background: linear-gradient(180deg, colors.$aqua 0%, colors.$info 100%);
+  background-attachment: fixed;
 }
 
 .hidden {
   display: none;
+}
+
+/* for small devices */
+[class*="col-"] {
+  width: 100%;
 }
 
 @media only screen and (min-width: 600px) {

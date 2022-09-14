@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DiscDrive</title>
+    <title>Coverage Calculator</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -15,9 +15,6 @@
   <body>
     <% if notice %>
       <%= render 'layouts/alerts' %>
-    <% end %>
-    <% if user_signed_in? %>
-      <%= render 'layouts/nav' %>
     <% end %>
     <div class="container-fluid">
       <br>

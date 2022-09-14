@@ -1,0 +1,26 @@
+@use 'colors';
+
+%ins-base {
+	border-radius: .5rem 5rem .5rem 5rem;
+	margin: 1rem;
+	width: 95%;
+	color: colors.$dark;
+	border: 4px solid colors.$info
+}
+
+#home {
+	@extend %ins-base;
+}
+
+#auto {
+	@extend %ins-base;
+}
+
+#umbrella {
+	@extend %ins-base;
+	
+}
+
+#life {
+	@extend %ins-base;
+}
