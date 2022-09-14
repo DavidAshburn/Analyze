@@ -54,6 +54,11 @@ $font: "Raleway";
 		background-color: colors.$primary;
   		color: colors.$info;
 	}
+
+	&:active {
+		background-color: colors.$dark;
+		color: colors.$info;
+	}
 }
 
 .btn-info {

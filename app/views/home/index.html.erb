@@ -6,18 +6,18 @@
 			<div class="row-center col-12 col-s-12">
 				<div class="stack-right col-6 col-s-12" id="homeinput">
 					<ul>
-						<li><span>Home Value:</span><input type="number" class="dollars-in" data-calc-target="value"></li>
-						<li><span>Square Footage:</span><input type="number" class="dollars-in" data-calc-target="footage"></li>
+						<li><span>Home Value:</span><input type="number" class="dollars-in" data-calc-target="value" value="750000"></li>
+						<li><span>Square Footage:</span><input type="number" class="dollars-in" data-calc-target="footage" value="1500"></li>
 						<br>
 
-						<li><span>Dwelling Coverage:</span><input type="number" class="dollars-in" data-calc-target="dwelling" ></li>
-						<li><span>Extended Replacement:</span><input type="number" class="dollars-in" data-calc-target="erc" ></li>
-						<li><span>Liability Coverage:</span><input type="number" class="dollars-in" data-calc-target="homeliability" ></li>
+						<li><span>Dwelling Coverage:</span><input type="number" class="dollars-in" data-calc-target="dwelling" value="600000"></li>
+						<li><span>Extended Replacement:</span><input type="number" class="dollars-in" data-calc-target="erc" value="1.2"></li>
+						<li><span>Liability Coverage:</span><input type="number" class="dollars-in" data-calc-target="homeliability" value="300000"></li>
 					</ul>
 				</div>
 				<div class="stack-center col-6 col-s-12" id="homecalc">
-					<div class="output">Excess RE Risk<span data-calc-target="excessre" ></span></div>
-					<div class="output">Coverage / Sq Ft<span data-calc-target="coversqft" ></span></div>
+					<div>Excess Home Value Risk: <span class="output" data-calc-target="excessre"></span></div>
+					<div>Coverage / Sq Ft: <span class="output" data-calc-target="coversqft"></span></div>
 				</div>
 			</div>
 		</div>
@@ -28,11 +28,11 @@
 			<div class="row-center col-12 col-s-12">
 				<div class="stack-right col-6 col-s-12" id="autoinput">
 					<ul>
-						<li><span>Liability Coverage:</span><input type="number" class="dollars-in" data-calc-target="autoliability"></li>
+						<li><span>Liability Coverage:</span><input type="number" class="dollars-in" data-calc-target="autoliability" value="100000"></li>
 					</ul>
 				</div>
 				<div class="stack-center col-6 col-s-12" id="autocalc">
-					<div class="output">Excess RE Risk<span data-calc-target="autoexcessre" ></span></div>
+					<div>Excess Home Value Risk<span data-calc-target="autoexcessre" class="output"></span></div>
 				</div>
 			</div>
 		</div>
@@ -43,14 +43,15 @@
 			<div class="row-center col-12 col-s-12">
 				<div class="stack-right col-6 col-s-12" id="umbrellainput">
 					<ul>
-						<li><span>Umbrella Limit:</span><input type="number" class="dollars-in" data-calc-target="umbrellalimit"></li>
-						<li><span># of Owned Properties:</span><input type="number" class="dollars-in" data-calc-target="numproperties"></li>
-						<li><span>Total Value:</span><input type="number" class="dollars-in" data-calc-target="totalpropvalue"></li>
+						<li><span>Umbrella Limit:</span><input type="number" class="dollars-in" data-calc-target="umbrellalimit" value="1000000"></li>
+						<li><span># of Owned Properties:</span><input type="number" class="dollars-in" data-calc-target="numproperties" value="2"></li>
+						<li><span>Total Property Value:</span><input type="number" class="dollars-in" data-calc-target="totalpropvalue" value="2300000"></li>
+						<li><span>Value of Other Investments:</span><input type="number" class="dollars-in" data-calc-target="investmentvalue" value="500000"></li>
 					</ul>
 				</div>
 				<div class="stack-center col-6 col-s-12" id="umbrellacalc">
-					<div class="output">Excess RE Risk on Auto<span data-calc-target="autoexcessumbrella" ></span></div>
-					<div class="output">Excess RE Risk on Personal<span data-calc-target="personalexcessumbrella" ></span></div>
+					<div>Excess Real Estate Risk<span data-calc-target="excessumbrella" class="output"></span></div>
+					<div>Including Investments<span data-calc-target="totalexcessumbrella" class="output"></span></div>
 				</div>
 			</div>
 		</div>
@@ -61,16 +62,16 @@
 			<div class="row-center col-12 col-s-12">
 				<div class="stack-right col-6 col-s-12" id="lifeinput">
 					<ul>
-						<li><span>Work Policy:</span><input type="number" class="dollars-in" data-calc-target="worklife"></li>
-						<li><span>Death Benefit:</span><input type="number" class="dollars-in" data-calc-target="deathbenefit"></li>
-						<li><span>Cash Value:</span><input type="number" class="dollars-in" data-calc-target="cashvalue"></li>
-						<li><span>Annual Income:</span><input type="number" class="dollars-in" data-calc-target="currentannual"></li>
-						<li><span>Number of Dependents:</span><input type="number" class="dollars-in" data-calc-target="dependents"></li>
+						<li><span>Work Policy:</span><input type="checkbox" class="check-in" data-calc-target="worklife"></li>
+						<li><span>Death Benefit:</span><input type="number" class="dollars-in" data-calc-target="deathbenefit" value="300000"></li>
+						<li><span>Cash Value:</span><input type="number" class="dollars-in" data-calc-target="cashvalue" value="0"></li>
+						<li><span>Annual Income:</span><input type="number" class="dollars-in" data-calc-target="currentannual" value="120000"></li>
+						<li><span>Number of Dependents:</span><input type="number" class="dollars-in" data-calc-target="dependents" value="2"></li>
 					</ul>
 				</div>
 				<div class="stack-center col-6 col-s-12" id="lifecalc">
-					<div class="output">Years of Current Income:<span data-calc-target="yearsincome" ></span></div>
-					<div class="output">Benefit to Each:<span data-calc-target="benefiteach" ></span></div>
+					<div>Years of Current Income:<span data-calc-target="yearsincome" class="output"></span></div>
+					<div>Benefit to Each:<span data-calc-target="benefiteach" class="output"></span></div>
 				</div>
 			</div>
 		</div>
