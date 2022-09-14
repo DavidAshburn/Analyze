@@ -1,19 +1,18 @@
 <nav data-controller="navbar">
   <div class="nav-left">
-    <%= link_to image_tag('disc.jpg', class:"img-link"), root_path %>
+    <%= link_to image_tag('ring.webp', class:"img-link"), root_path %>
     <%= link_to "Profile", home_profile_path, class:"nav-link" %>
     <div class="nav-dropdown">
       <button class="nav-drop-btn" data-action="navbar#showDrop">Courses & Cards</button>
       <div class="nav-drop-content hidden" data-navbar-target="maindrop">
-        <%= link_to "Courses", courses_path, class:"nav-link" %>
-        <%= link_to "Add a Course", new_course_path, class:"nav-link" %>
-        <%= link_to "Cards", cards_path, class:"nav-link" %>
+        <%# link_to "Courses", courses_path, class:"nav-link" %>
+        <%# link_to "Add a Course", new_course_path, class:"nav-link" %>
+        <%# link_to "Cards", cards_path, class:"nav-link" %>
         <button class="nav-drop-btn" data-action="navbar#hideDrop">Close</button>
       </div>
     </div>
   </div>
   <div class="nav-right">
     <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"nav-link-info" %>
-    <%= link_to "About", home_about_path, class:"nav-link"%>
   </div>
 </nav>

@@ -77,5 +77,10 @@
 			</div>
 		</div>
 	</div>
-	<button class="btn-flat" data-action="calc#update">Calculate</button>
+	<div class="row-right col-12 col-s-12">
+		<div class="row-between col-7 col-s-12">
+			<button class="btn-flat" data-action="calc#update">Calculate</button>
+			<%= link_to "Log In", new_user_session_path, type: "button", class:"btn-flat" %>
+		</div>
+	</div>
 </div>
