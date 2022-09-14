@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :tasks
   resources :leads
   devise_for :users
   root 'home#index'
