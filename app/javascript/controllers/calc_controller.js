@@ -15,7 +15,8 @@ static targets = [
   "totalpropvalue",
   "investmentvalue",
   "autoexcessre",
-  "excessumbrella",
+  "excessumbrellaauto",
+  "excessumbrellahome",
   "totalexcessumbrella",
   "worklife",
   "deathbenefit",
@@ -59,10 +60,17 @@ static targets = [
         this.lower = this.auto;
 
       if(this.umb > 0) {
-        this.worstcase = parseInt(this.lower) + parseInt(this.umb);
-        this.worstcase = this.totalpropvalueTarget.value - this.worstcase;
-        this.excessumbrellaTarget.innerText = `$${this.worstcase}`;
-        this.worstcase += parseInt(this.investmentvalueTarget.value);
+
+        this.autoumb = parseInt(this.auto) + parseInt(this.umb);
+        this.homeumb = parseInt(this.home) + parseInt(this.umb);
+
+        this.autoumb = this.totalpropvalueTarget.value - this.autoumb;
+        this.homeumb = this.totalpropvalueTarget.value - this.homeumb;
+
+        this.excessumbrellaautoTarget.innerText = `$${this.autoumb}`;
+        this.excessumbrellahomeTarget.innerText = `$${this.homeumb}`;
+
+        this.worstcase = (parseInt(this.totalpropvalueTarget.value) + parseInt(this.investmentvalueTarget.value)) - (parseInt(this.lower) + parseInt(this.umb));
         this.totalexcessumbrellaTarget.innerText = `$${this.worstcase}`;
       }
 
