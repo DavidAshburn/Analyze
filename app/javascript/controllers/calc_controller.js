@@ -27,61 +27,78 @@ static targets = [
   "benefiteach"
 ]
 
-  connect() {
-    
+connect() {
+  this.formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 0, 
+    maximumFractionDigits: 0,
+  });
+}
+
+excessREhome(home) {
+  if(home > 0) {
+      let excesshome = this.valueTarget.value - parseInt(home);
+      this.excessreTarget.innerText = this.formatter.format(excesshome);
+    }
+  
+}
+
+coverPerSqft(feet) {
+  if(feet > 0) {
+    let sqftout = (this.dwellingTarget.value * this.ercTarget.value) / feet;
+    this.coversqftTarget.innerText = this.formatter.format(sqftout);
   }
+}
 
-  update() {
-      this.home = this.homeliabilityTarget.value;
-      this.auto = this.autoliabilityTarget.value;
-      this.umb = this.umbrellalimitTarget.value;
-      this.life = this.deathbenefitTarget.value;
-
-
-      if(this.home > 0) {
-        this.excesshome = this.valueTarget.value - this.home;
-        this.excessreTarget.innerText = `$${this.excesshome}`;
-      }
-
-      if(this.footageTarget.value > 0) {
-        this.sqftout = (this.dwellingTarget.value * this.ercTarget.value) / this.footageTarget.value ;
-        this.coversqftTarget.innerText = `$${this.sqftout}`;
-        console.log("sqft")
-      }
-
-      if(this.auto > 0) {
-        this.autoexcess = this.valueTarget.value - this.auto;
-        this.autoexcessreTarget.innerText = `$${this.autoexcess}`;
-      }
-
-      if(this.auto > this.home)
-        this.lower = this.home;
-      else
-        this.lower = this.auto;
-
-      if(this.umb > 0) {
-
-        this.autoumb = parseInt(this.auto) + parseInt(this.umb);
-        this.homeumb = parseInt(this.home) + parseInt(this.umb);
-
-        this.autoumb = this.totalpropvalueTarget.value - this.autoumb;
-        this.homeumb = this.totalpropvalueTarget.value - this.homeumb;
-
-        this.excessumbrellaautoTarget.innerText = `$${this.autoumb}`;
-        this.excessumbrellahomeTarget.innerText = `$${this.homeumb}`;
-
-        this.worstcase = (parseInt(this.totalpropvalueTarget.value) + parseInt(this.investmentvalueTarget.value)) - (parseInt(this.lower) + parseInt(this.umb));
-        this.totalexcessumbrellaTarget.innerText = `$${this.worstcase}`;
-      }
-
-      if(this.life > 0) {
-        this.yearsleft = this.life / parseFloat(this.currentannualTarget.value);
-        this.yearsincomeTarget.innerText = this.yearsleft;
-
-        this.benefiteachTarget.innerText = `$${this.life / parseFloat(this.dependentsTarget.value)}`
-      }
-
+excessREauto(auto) {
+  if(auto > 0) {
+    let autoexcess = this.valueTarget.value - auto;
+    this.autoexcessreTarget.innerText = this.formatter.format(autoexcess);
   }
+}
 
+excessREumbrella(umb, auto, home) {
+  if(umb > 0) {
+    let autoumb = parseInt(auto) + parseInt(umb);
+    let homeumb = parseInt(home) + parseInt(umb);
+    let propval = this.totalpropvalueTarget.value;
+    let investval = this.investmentvalueTarget.value;
+
+    autoumb = propval - autoumb;
+    homeumb = propval - homeumb;
+
+    this.excessumbrellaautoTarget.innerText = this.formatter.format(autoumb);
+    this.excessumbrellahomeTarget.innerText = this.formatter.format(homeumb);
+
+    let worstcase = (parseInt(propval) + parseInt(investval)) - (parseInt(auto) + parseInt(umb));
+    this.totalexcessumbrellaTarget.innerText = this.formatter.format(worstcase);
+    }
+}
+
+lifeCalc(life) {
+  if(life > 0) {
+    let yearsleft = life / parseFloat(this.currentannualTarget.value);
+    this.yearsincomeTarget.innerText = yearsleft.toFixed(2);
+
+    let remainder = life / parseFloat(this.dependentsTarget.value);
+
+    this.benefiteachTarget.innerText = this.formatter.format(remainder);
+  }
+}
+
+update() {
+  let home = this.homeliabilityTarget.value;
+  let feet = this.footageTarget.value;
+  let auto = this.autoliabilityTarget.value;
+  let umb = this.umbrellalimitTarget.value;
+  let life = this.deathbenefitTarget.value;
+
+  this.excessREhome(home);
+  this.coverPerSqft(feet);
+  this.excessREauto(auto);
+  this.excessREumbrella(umb, auto, home);
+  this.lifeCalc(life);
+}
 
 }

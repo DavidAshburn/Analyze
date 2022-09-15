@@ -70,6 +70,10 @@
 	justify-content: space-evenly;
 }
 
+.row-blank {
+	@extend %flex;
+}
+
 .container-alert {
 	@extend %flex;
 	justify-content: center;
@@ -98,14 +102,14 @@
   	}
 
   	.row-center {
-		flex-direction: column;
+			flex-direction: column;
   	}
 
   	.row-between {
-		flex-direction: column;
+			flex-direction: column;
   	}
 
   	.row-even {
-		flex-direction: column;
+			flex-direction: column;
   	}
 }
