@@ -11,32 +11,32 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+  <div class="form-field">
+    <%= form.text_field :name, placeholder:"Name" %>
+  </div>
+
+  <div class="form-field">
+    
+    <%= form.text_field :email, placeholder:"Email"  %>
+  </div>
+
+  <div class="form-field">
+    <%= form.text_field :phone, placeholder:"Phone (xxx-xxx-xxxx)"  %>
+  </div>
+
+  <div class="form-field">
+    <%= form.text_field :lines, placeholder:"Lines"  %>
+  </div>
+
+  <div class="form-field">
+    <%= form.text_area :notes, placeholder:"Notes"  %>
   </div>
 
   <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
+      <%= form.number_field :user_id, id: :lead_user_id, value:current_user.id, type: :hidden %>
   </div>
 
   <div>
-    <%= form.label :phone, style: "display: block" %>
-    <%= form.text_field :phone %>
-  </div>
-
-  <div>
-    <%= form.label :lines, style: "display: block" %>
-    <%= form.text_field :lines %>
-  </div>
-
-  <div>
-    <%= form.label :notes, style: "display: block" %>
-    <%= form.text_area :notes %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+    <%= form.submit class:"btn-flat" %>
   </div>
 <% end %>

@@ -19,6 +19,17 @@
 	}
 }
 
+textarea {
+	@extend %formbase;
+	width: 40vw;
+	min-width: 20rem;
+	height: 12rem;
+	font-size: 14pt;
+	font-family: "Raleway";
+	border-width: .2rem;
+	border-color: colors.$dark;
+}
+
 .dollars-in {
 	@extend %formbase;
 	width: 60%;

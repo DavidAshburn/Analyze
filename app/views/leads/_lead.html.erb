@@ -1,19 +1,21 @@
 <div id="<%= dom_id lead %>">
-  <tr>
-    <td>
+  <div class="row-center col-8 col-s-12">
+    <div class="td">
       <%= lead.name %>
-    </td>
-    <td>
+    </div>
+    <div class="td">
       <%= lead.email %>
-    </td>
-    <td>
+    </div>
+    <div class="td">
       <%= lead.phone %>
-    </td>
-    <td>
+    </div>
+    <div class="td">
       <%= lead.lines %>
-    </td>
-  </tr>
-  <tr>
-    <%= lead.notes %>
-  </tr>
+    </div>
+  </div>
+  <div class="row-center col-8 col-s-12">
+    <div class="noterow">
+      <%= lead.notes %>
+    </div>
+  </div>
 </div>
