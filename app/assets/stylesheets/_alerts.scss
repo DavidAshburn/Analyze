@@ -2,14 +2,14 @@
 
 .alert {
 	display: flex;
-	border: 1px solid darken(colors.$success, 25%);
-	background-color: colors.$success;
+	border: 1px solid darken(colors.$primary, 25%);
+	background-color: colors.$primary;
 	border-radius: 3.2rem .8rem 3.2rem .8rem;
 
 
 	width: 80vw;
 	font-family: "Raleway";
-	color: darken(colors.$success, 25%);
+	color: colors.$info;
 	padding: 1rem;
 	justify-content: space-between;
 	align-items: center;
