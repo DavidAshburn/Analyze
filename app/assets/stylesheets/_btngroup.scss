@@ -3,6 +3,7 @@
 .btn-group {
 	display: flex;
 	gap: 0;
+	padding-top: 1rem;
 
 	.group-button {
 		background-color: colors.$secondary;

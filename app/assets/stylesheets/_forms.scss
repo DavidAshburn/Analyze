@@ -19,6 +19,14 @@
 	}
 }
 
+.rail-field {
+	@extend %formbase;
+	width: 50vw;
+	min-width: 20rem;
+	height: 3rem;
+	font-size: 14pt;
+}
+
 textarea {
 	@extend %formbase;
 	width: 40vw;

@@ -9,30 +9,35 @@
 	flex-direction: column;
 }
 
+.container-fluid {
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+}
 
 // Columns -----------------------
 .stack-left {
 	@extend %flex-col;
 	justify-content: start;
+	align-items: start;
 }
 
 .stack-right {
 	@extend %flex-col;
 	justify-content: end;
-	padding: 0;
-
 	ul {
 		width: 100%;
-  	li {
-    	display: flex;
-    	justify-content: space-between;
-    	align-items: center;
-  	}
+  		li {
+    		display: flex;
+    		justify-content: space-between;
+    		align-items: center;
+  		}
 	}
 }
 .stack-center {
 	@extend %flex-col;
 	justify-content: center;
+	align-items: center;
 }
 .stack-between {
 	@extend %flex-col;
@@ -70,10 +75,6 @@
 	justify-content: space-evenly;
 }
 
-.row-blank {
-	@extend %flex;
-}
-
 .container-alert {
 	@extend %flex;
 	justify-content: center;
@@ -82,19 +83,37 @@
 	botom: 10px;
 }
 
-[class*=row-]::after {
-  content: "";
-  clear: both;
-  display: table;
+%tablebase {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.td {
-
+.table {
+	@extend %tablebase;
+	flex-direction: column;
 }
 
-.noterow {
-
+.thead {
+	@extend %tablebase;
+	font-weight: bold;
 }
+
+.trow {
+	@extend %tablebase;
+	width: 100%;
+}
+
+.tdat-1 {
+	@extend %tablebase;
+	padding: .5rem 1rem;
+}
+
+.tdat-2 {
+	@extend %tablebase;
+	padding: 1rem 2rem;
+}
+
 
 //Media Queries
 
@@ -110,14 +129,14 @@
   	}
 
   	.row-center {
-			flex-direction: column;
+		flex-direction: column;
   	}
 
   	.row-between {
-			flex-direction: column;
+		flex-direction: column;
   	}
 
   	.row-even {
-			flex-direction: column;
+		flex-direction: column;
   	}
 }

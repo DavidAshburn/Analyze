@@ -3,52 +3,20 @@
 $font: "Raleway";
 
 %btn {
-	margin: 1rem;
-	padding: .5rem 2rem;
-	border-radius: 10px;
-	border: none;
-	font-family: $font, sans-serif;
-	font-weight: bold;
-	font-size: 14pt;
-	color: black;
-	transition: background-color .5s, border .5s;
-	text-decoration: none;
-	margin: .5rem;
-}
-
-.btn-primary {
-	@extend %btn;
-	background-color: colors.$primary;
-	color: white;
-	box-shadow: inset 2px 2px 4px 2px lighten(colors.$primary,10%), inset -2px -2px 4px 2px rgba(0,0,0, .4);
-
-	&:hover {
-		background-color: darken(colors.$primary, 10%);
-		box-shadow: inset 2px 2px 4px 2px colors.$primary, inset -2px -2px 4px 2px rgba(0,0,0, .4);
-	}
-}
-
-.btn-secondary {
-	@extend %btn;
-	background-color: colors.$secondary;
-	color: black;
-	box-shadow: inset 3px 3px 4px 2px lighten(colors.$secondary,10%), inset -2px -2px 4px 2px rgba(0,0,0, .4);
-
-	&:hover {
-		background-color: darken(colors.$secondary, 10%);
-		box-shadow: inset 2px 2px 4px 2px colors.$secondary, inset -2px -2px 4px 2px rgba(0,0,0, .4);
-	}
-}
-
-.btn-flat {
-	background-color: colors.$secondary;
-	color: colors.$dark;
 	text-decoration: none;
 	margin: 1rem;
 	padding: 1rem 2rem;
 	border-radius: 3.2rem .8rem 3.2rem .8rem;
 	border: none;
 	font-size: inherit;
+}
+
+
+
+.btn-flat {
+	@extend %btn;
+	background-color: colors.$secondary;
+	color: colors.$dark;
 
 	&:hover {
 		background-color: colors.$primary;
@@ -64,23 +32,16 @@ $font: "Raleway";
 .btn-info {
 	@extend %btn;
 	background-color: colors.$info;
-	box-shadow: inset 3px 3px 4px 2px lighten(colors.$info,10%), inset -2px -2px 4px 2px rgba(0,0,0, .4);
+	color: colors.$dark;
 
 	&:hover {
-		background-color: darken(colors.$info, 10%);
-		box-shadow: inset 2px 2px 4px 2px colors.$info, inset -2px -2px 4px 2px rgba(0,0,0, .4);
+		background-color: colors.$secondary;
+  		color: colors.$info;
 	}
-}
 
-.btn-dark {
-	@extend %btn;
-	background-color: colors.$dark;
-	color: whitesmoke;
-	box-shadow: inset 3px 3px 4px 2px lighten(colors.$dark,10%), inset -2px -2px 4px 2px rgba(0,0,0, .4);
-
-	&:hover {
-		background-color: darken(colors.$dark, 10%);
-		box-shadow: inset 2px 2px 4px 2px colors.$dark, inset -2px -2px 4px 2px rgba(0,0,0, .4);
+	&:active {
+		background-color: colors.$primary;
+		color: colors.$info;
 	}
 }
 

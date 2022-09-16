@@ -1,3 +1,5 @@
+@use 'colors';
+
 .title {
 	font-family: "Monoton";
 	font-size: 50pt;
@@ -5,7 +7,21 @@
 
 .subtitle {
 	font-family: "Righteous";
-	font-size: 30pt;
+	font-size: 25pt;
+	color: colors.$dark;
+}
+
+.listtitle {
+	font-family: "Righteous";
+	font-size: 25pt;
+	padding-top: 1rem;
+	color: colors.$dark;
+}
+
+.muted {
+	font-family: "Raleway";
+	font-size: 18pt;
+	color: colors.$info;
 }
 
 .hero-text {
