@@ -9,12 +9,24 @@
 	padding: 1rem;
 }
 
+%ins-calc {
+	width: 40%;
+}
+
 #home {
 	@extend %ins-base;
 }
 
+#homecalc {
+	@extend %ins-calc;
+}
+
 #auto {
 	@extend %ins-base;
+}
+
+#autocalc {
+	@extend %ins-calc;
 }
 
 #umbrella {
@@ -22,8 +34,16 @@
 	
 }
 
+#umbrellacalc {
+	@extend %ins-calc;
+}
+
 #life {
 	@extend %ins-base;
+}
+
+#lifecalc {
+	@extend %ins-calc;
 }
 
 #myleads {

@@ -45,6 +45,24 @@ $font: "Raleway";
 	}
 }
 
+.btn-sm-info {
+	@extend %btn;
+	background-color: colors.$info;
+	color: colors.$dark;
+	margin: .5rem;
+	padding: .5rem 1rem;
+
+	&:hover {
+		background-color: colors.$secondary;
+  		color: colors.$info;
+	}
+
+	&:active {
+		background-color: colors.$primary;
+		color: colors.$info;
+	}
+}
+
 .btn-close {
 	background-color: colors.$success;
 	border: 1px solid colors.$dark;

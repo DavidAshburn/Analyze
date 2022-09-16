@@ -34,6 +34,8 @@ connect() {
     minimumFractionDigits: 0, 
     maximumFractionDigits: 0,
   });
+
+  this.update();
 }
 
 excessREhome(home) {
