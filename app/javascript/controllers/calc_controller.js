@@ -37,7 +37,7 @@ connect() {
 }
 
 excessREhome(home) {
-  if(home > 0) {
+  if(home >= 0) {
       let excesshome = this.valueTarget.value - parseInt(home);
       this.excessreTarget.innerText = this.formatter.format(excesshome);
     }
@@ -52,14 +52,14 @@ coverPerSqft(feet) {
 }
 
 excessREauto(auto) {
-  if(auto > 0) {
+  if(auto >= 0) {
     let autoexcess = this.valueTarget.value - auto;
     this.autoexcessreTarget.innerText = this.formatter.format(autoexcess);
   }
 }
 
 excessREumbrella(umb, auto, home) {
-  if(umb > 0) {
+  if(umb >= 0) {
     let autoumb = parseInt(auto) + parseInt(umb);
     let homeumb = parseInt(home) + parseInt(umb);
     let propval = this.totalpropvalueTarget.value;
@@ -77,7 +77,7 @@ excessREumbrella(umb, auto, home) {
 }
 
 lifeCalc(life) {
-  if(life > 0) {
+  if(life >= 0) {
     let yearsleft = life / parseFloat(this.currentannualTarget.value);
     this.yearsincomeTarget.innerText = yearsleft.toFixed(2);
 
@@ -99,6 +99,7 @@ update() {
   this.excessREauto(auto);
   this.excessREumbrella(umb, auto, home);
   this.lifeCalc(life);
+  console.log("update");
 }
 
 }
