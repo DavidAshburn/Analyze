@@ -12,3 +12,6 @@ application.register("navbar", NavbarController)
 
 import CalcController from "./calc_controller"
 application.register("calc", CalcController)
+
+import ProctorController from "./proctor_controller"
+application.register("proctor", ProctorController)
